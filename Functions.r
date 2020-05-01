@@ -52,3 +52,9 @@ MP_mean_occupation_time<- function(p_hat,r,t)
     }
     return(r^(-1)*Mt)
 }
+
+# MOL=mean occupation law and c=cost which is a col vector
+Cost_modle<-function(MOL,c)
+{
+    return(MOL%*%c)
+}
