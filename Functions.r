@@ -58,3 +58,10 @@ Cost_modle<-function(MOL,c)
 {
     return(MOL%*%c)
 }
+
+MP_hitting_time <- function(j, Q) {
+    Qj <- Q[-j, -j]
+    inv_Qj <- solve(Qj)
+    h_j <- rowSums(inv_Qj)
+    return(h_j)
+}
